@@ -1,0 +1,201 @@
+/* Root Container */
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  background-color: #2c2c2c; /* Dark background */
+}
+
+/* Logo Styles */
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  transition: transform 300ms, filter 300ms;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+  filter: drop-shadow(0 0 10px rgba(100, 108, 255, 0.7));
+}
+
+/* Global Styles */
+body {
+  margin: 0;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  background-color: #2c2c2c; /* Dark background */
+  color: #e0e0e0; /* Light text color */
+}
+
+h1, h2 {
+  color: #ffffff; /* White for headers */
+  margin: 0.5rem 0;
+}
+
+/* Card Styles */
+.card {
+  padding: 2em;
+  background-color: #3a3a3a; /* Slightly lighter dark for cards */
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* Form Container */
+.form-container {
+  border: 2px solid #555; /* Thicker border */
+  border-radius: 12px;
+  padding: 2em;
+  background-color: #3a3a3a; /* Background color */
+}
+
+/* Form Styles */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+form div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+form label {
+  flex: 1;
+  margin-right: 1rem;
+  font-weight: bold;
+  color: #ffffff; /* White for labels */
+}
+
+form input {
+  flex: 2;
+  padding: 0.75rem;
+  border: 2px solid #555; /* Thicker border */
+  border-radius: 6px;
+  background-color: #444444; /* Dark input background */
+  color: #e0e0e0; /* Light text color */
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+form input:focus {
+  border-color: #3498db; /* Focus border color */
+  box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+}
+
+/* Button Styles */
+button {
+  padding: 0.6rem 1.2rem;
+  border: 1px solid transparent; /* Add transparent border */
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s, transform 0.3s, border-color 0.3s;
+  margin: 0.5rem;
+}
+
+/* Primary Button */
+button[type='button'] {
+  background-color: #3498db; /* Blue button */
+  color: #ffffff; /* White text */
+}
+
+button[type='button']:hover {
+  background-color: #2980b9; /* Darker blue on hover */
+  transform: translateY(-2px);
+}
+
+/* Edit Button */
+button.edit-button {
+  background-color: #2ecc71; /* Green for edit */
+  color: #ffffff; /* White text */
+}
+
+button.edit-button:hover {
+  background-color: #27ae60; /* Darker green on hover */
+}
+
+/* Delete Button */
+button.delete-button {
+  background-color: #e74c3c; /* Red for delete */
+  color: #ffffff; /* White text */
+}
+
+button.delete-button:hover {
+  background-color: #c0392b; /* Darker red on hover */
+}
+
+/* Show Deleted Products Button */
+.show-deleted-button {
+  background-color: #f39c12; /* Orange for show deleted */
+  color: #ffffff; /* White text */
+}
+
+.show-deleted-button:hover {
+  background-color: #e67e22; /* Darker orange on hover */
+}
+
+/* Disabled State for Buttons */
+button:disabled {
+  background-color: #555555; /* Dark gray for disabled */
+  cursor: not-allowed; /* Not-allowed cursor for disabled */
+}
+
+/* Product List Styles */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border: 2px solid #444; /* Thicker border for list items */
+  border-radius: 6px;
+  margin-bottom: 0.5rem;
+  background-color: #3a3a3a; /* Dark item background */
+  transition: background-color 0.3s;
+}
+
+li:hover {
+  background-color: #444444; /* Lighter dark on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  form div {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  form input {
+      width: 100%;
+  }
+
+  li {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  li div {
+      margin-bottom: 0.5rem;
+  }
+}
+
+/* Restore Button */
+.restore-button {
+  background-color: #f39c12; /* Orange for restore */
+  color: #ffffff; /* White text */
+  margin-left: 1rem;
+}
+
+.restore-button:hover {
+  background-color: #e67e22; /* Darker orange on hover */
+}
